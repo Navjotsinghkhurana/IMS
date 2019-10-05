@@ -1,12 +1,21 @@
-<?php include("../conecton.php"); ?>
+<?php include("conecton.php"); ?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
     <title>GNDPC | Dashboard</title>
-    <?php 
-include("common_css.php");
-     ?>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <!-- Bootstrap 3.3.2 -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Font Awesome Icons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Ionicons -->
+    <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <!-- Theme style -->
+    <link href="dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+    <!-- AdminLTE Skins. Choose a skin from the css/skins 
+         folder instead of downloading all of them to reduce the load. -->
+    <link href="dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -55,8 +64,8 @@ include("common_css.php");
     <!-- Site wrapper -->
     <div class="wrapper">
       
-     <?php include('../header.php'); ?>
-      <?php include('../sidebar.php'); ?>
+     <?php include('header.php'); ?>
+      <?php include('sidebar.php'); ?>
 
       <!-- =============================================== -->
 
@@ -65,8 +74,8 @@ include("common_css.php");
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Add Staff
-            <small>Staff,Lecturer,Clerk,Accountant</small>
+            Add User
+            <small>Lecturer,Clerk,Accountant</small>
           </h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -81,7 +90,7 @@ include("common_css.php");
           <!-- Default box -->
           <div class="box">
             <div class="box-header with-border">
-             <center><h3 class="box-title">Add Staff</h3></center>
+              <h3 class="box-title">Title</h3>
               <div class="box-tools pull-right">
                 <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
                
@@ -102,8 +111,8 @@ include("common_css.php");
                         <div class="col-md-8">
                             <div class="card">
                                 <div class="card-header" data-background-color="purple">
-                                    <h1 class="title">Add User</h1>
-                                    <!-- <p class="category">Complete profile</p> -->
+                                    <h4 class="title">Edit Profile</h4>
+                                    <p class="category">Complete your profile</p>
                                 </div>
                                 <div class="card-content">
                                     <form method="POST" enctype="multipart/form-data" >
@@ -111,26 +120,20 @@ include("common_css.php");
                                             <div class="col-md-5">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Full Name</label>
-                                                    <input type="text" placeholder="Full Name" name="Fullname" required class="form-control" />
+                                                    <input type="text" placeholder="Full Name" name="name" required class="form-control" />
                                                 </div>
                                             </div>
                                             <div class="col-md-3">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Username</label>
                                                    
-                                                    <input type="text" placeholder="Username" name="Username" required class="form-control" />
+                                                    <input type="text" placeholder="Username" name="username" required class="form-control" />
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
-                                               <div class="form-group label-floating">
-                                                    <label class="control-label">Category</label>
-                                                    <select class="form-control" required  name="Category" >
-            
-                                                    <option value="General">General</option>
-                                                    <option value="SC">SC</option>
-                                                    <option value="OBC"> OBC</option>
-                                                    
-                                                    </select>
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">Email address</label>
+                                                    <input type="email" placeholder="Email" name="email" required class="form-control" />
                                                 </div>
                                             </div>
                                         </div>
@@ -159,59 +162,22 @@ include("common_css.php");
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">Religion</label>
-                                                    <select class="form-control" required  name="Religion" >
-            
-                                                    <option value="Sikh">Sikh</option>
-                                                    <option value="Hindu">Hindu</option>
-                                                    <option value="Muslim"> Muslim</option>
-                                                    <option value="Christion"> christion</option>
-                                                    <option value="Jewish"> Jewish</option>
-                                                    
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Gender</label>
-                                                    <select class="form-control" required  name="Gender" >
-            
-                                                    <option value="Male">Male</option>
-                                                    <option value="Female">Female</option>
-                                                    <option value="Other"> Other</option>
-                                                   
-                                                    
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group label-floating">
-                                                    <label class="control-label">Designation</label>
-                                                   <input type="text" placeholder="Designation" name="Designation" required class="form-control" />
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="form-group label-floating">
                                                     <label class="control-label">Short Name</label>
-                                                   <input type="text" placeholder="Short Name" name="Shortname" required onfocusout="edValueKeyPress()" id="edValue" class="form-control" />
+                                                   <input type="text" placeholder="Short Name" name="shortname" required onfocusout="edValueKeyPress()" id="edValue" class="form-control" />
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">Email address</label>
-                                                    <input type="email" placeholder="Email" name="email" required class="form-control" />
-                                                    
+                                                    <label class="control-label">Your Code</label>
+                                                     <input type="text" placeholder="Teacher Code" name="t_code" id="tcode" required="" readonly class="form-control" />
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Appointed As</label>
-                                                   <select class="form-control" name="Appointed" required ">
+                                                   <select class="form-control" name="type" required ">
             
-                                                    <option value="15">Teacher</option>
-                                                    <option value="21">Clerk</option>
-                                                    <option value="26">Head of Department</option>
-                                                    
+                                                    <option value="teacher">Teacher</option>
                                                     
                                                     </select>
                                                 </div>
@@ -227,13 +193,13 @@ include("common_css.php");
                                             <div class="col-md-4">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Father's Name</label>
-                                                   <input type="Text" placeholder="Father's Name" name="fathername" required class="form-control" />
+                                                   <input type="Text" placeholder="Father's Name" name="fname" required class="form-control" />
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Mother's Name</label>
-                                                    <input type="text" placeholder="Mother's Name" name="mothername" required class="form-control" />
+                                                    <input type="text" placeholder="Mother's Name" name="mname" required class="form-control" />
                                                 </div>
                                             </div>
                                         </div>
@@ -253,7 +219,7 @@ include("common_css.php");
                                             <div class="col-md-4">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Qualification</label>
-                                                    <input type="text" placeholder="Qualification" name="Qualification" required class="form-control" />
+                                                    <input type="text" placeholder="Qualification" name="qual" required class="form-control" />
                                                 </div>
                                             </div>
                                         </div>
@@ -263,12 +229,12 @@ include("common_css.php");
                                                     <label class="control-label">Department</label>
                                                     <select class="form-control" required  name="Department" >
             
-                                                    <option value="1">Civil Engineering</option>
-                                                    <option value="62"> Computer Engineering</option>
-                                                    <option value="2"> Electrical Engineering</option>
-                                                     <option value="3"> Electronics and Communication Engineering</option>
-                                                    <option value="4"> Mechnical Engineering</option>
-                                                     <option value="5"> Automobile Engineering</option>
+                                                    <option value="Civil">Civil Engineering</option>
+                                                    <option value="Comp"> Computer Engineering</option>
+                                                    <option value="Elec"> Electrical Engineering</option>
+                                                     <option value="ece"> Electronics and Communication Engineering</option>
+                                                    <option value="Mech"> Mechnical Engineering</option>
+                                                     <option value="Auto"> Automobile Engineering</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -281,7 +247,7 @@ include("common_css.php");
                                             <div class="col-md-4">
                                                 <div class="form-group label-floating">
                                                     <label class="control-label">Blood Group</label>
-                                                    <select class="form-control" name="bloodgroup" required >
+                                                    <select class="form-control" name="blood_group" required >
         
                                                         <option value="A-">A-</option>
                                                         <option value="A+">A+</option>
@@ -301,16 +267,13 @@ include("common_css.php");
                                                     <label>Address</label>
                                                     <div class="form-group label-floating">
                                                         <label class="control-label"> Enter Your Address Below</label>
-                                                        <textarea class="form-control" rows="5" name="Address" required></textarea>
+                                                        <textarea class="form-control" rows="5" name="address"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <button type="submit" class="btn btn-primary pull-right" name="Submit">Add User</button>
                                         <div class="clearfix"></div>
-                                    </form>
-                                    <form method="POST">	
-                                    		<button class="btn btn-primary pull-right" name="shift">Shift	</button>
                                     </form>
                                 </div>
                             </div>
@@ -319,7 +282,7 @@ include("common_css.php");
                             <div class="card card-profile">
                                 <div class="card-avatar">
                                     <a href="#pablo">
-                                        <img class="img" id="blah" src="http://placehold.it/350" alt="your image" width="350" height="350" />
+                                        <img class="img" id="blah" src="http://placehold.it/180" alt="your image" width="180" height="180" />
                                     </a>
                                 </div>
                                 <!-- <div class="content">
@@ -335,90 +298,67 @@ include("common_css.php");
                     </div>
                 </div>
             </div>
+
+
+
+
+
+
+
             </div><!-- /.box-body -->
             <div class="box-footer">
-              <center>Enter the details carefully</center>
+              Footer
             </div><!-- /.box-footer-->
           </div><!-- /.box -->
 
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
 
-       <?php include("../footer.php"); ?>
+       <?php include("footer.php"); ?>
     </div><!-- ./wrapper -->
 
-   <?php include("common_jquery.php"); ?>
+    <!-- jQuery 2.1.3 -->
+    <script src="plugins/jQuery/jQuery-2.1.3.min.js"></script>
+    <!-- Bootstrap 3.3.2 JS -->
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- SlimScroll -->
+    <script src="plugins/slimScroll/jquery.slimScroll.min.js" type="text/javascript"></script>
+    <!-- FastClick -->
+    <script src='../../plugins/fastclick/fastclick.min.js'></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/app.min.js" type="text/javascript"></script>
   </body>
 </html>
 <?php
-
-if (isset($_POST['shift'])){
-
-$SqlGet="SELECT * FROM st_excel";
-$QueryGet=mysqli_query($conn,$SqlGet);
-while ($FetchGet=mysqli_fetch_array($QueryGet)) {
-	$Roll_No=$FetchGet['roll_no'];
-	$Registration_No=$FetchGet['Registration_no'];
-	$Student_Name=$FetchGet['Student_Name'];
-    // $Father_Name=$FetchGet['Father_Name'];
-	$Father_Name='Father_Name';
-	$empty="";
-	$user_level="6";
-	$batch=2016;
-	$department=62;
-    $student_image='stu_image';
-
-	$Username="1662".$Roll_No;
-
-	$SqlInsert="INSERT INTO student (student_id, username, name, class, registration_number, father, mother, batch, section, dob, address, gender, blood_group, department, roll_no, student_email, parent_email, phone, alt_phone, religion, category, student_image, father_image, mother_image, student_uidai_number, student_uidai_image, parent_uidai_number, parent_uidai_image, status) VALUES (NULL, '$Username', '$Student_Name', '$empty', '$Registration_No', '$Father_Name', '$empty', '$batch', '$empty', '$empty', '$empty', '$empty', '$empty','$department', '$Roll_No','$empty', '$empty', '$empty', '$empty', '$empty', '$empty', '$student_image', '$empty', '$empty', '$empty', '$empty', '$empty', '$empty', '1')";
-	$QueryInsert=mysqli_query($conn,$SqlInsert);
-	$insert_id = mysqli_insert_id($conn);
-	$Password=random_code(8);
-
-	$user_sql="INSERT INTO user_login (tid, user_id, username, password, user_level, login_log, logout_log, status) VALUES (NULL, '$insert_id', '$Username', '$Password', '$user_level', '$empty', '$empty', '1');";
-   $user_query=mysqli_query($conn,$user_sql);
-
-
-
-
-
-}
-
-
-}
-
-
 if (isset($_POST['Submit']))
  {
   
 
+
   
-$Username=$_POST['Username'];
-$Category=$_POST['Category'];
-$Name=$_POST['Fullname'];
-$Shortname=$_POST['Shortname'];
+$username=$_POST['username'];
+$t_code=$_POST['t_code'];
+$name=$_POST['name'];
+$shortname=$_POST['shortname'];
 $email=$_POST['email'];
-$fathername=$_POST['fathername'];
-$mothername=$_POST['mothername'];
+$fathername=$_POST['fname'];
+$mothername=$_POST['mname'];
 $dob=$_POST['dob'];
 $doj=$_POST['doj'];
-$Qualification=$_POST['Qualification'];
-$bloodgroup=$_POST['bloodgroup'];
+$qualification=$_POST['qual'];
+$blood_group=$_POST['blood_group'];
 $image=$_FILES['myimage'];
 $phone=$_POST['phone'];
-$Address=$_POST['Address'];
-$Department=$_POST['Department'];
-$user_level=$_POST['Appointed'];
-$Designation=$_POST['Designation'];
-$Religion=$_POST['Religion'];
-$Gender=$_POST['Gender'];
+$address=$_POST['address'];
+$designation=$_POST['designation'];
+$department=$_POST['Department'];
+$appointment_type=$_POST['type'];
+$type="teacher";
 
-$Username=$Department.$Username;
-$empty="";
-$Checksql="SELECT * from user_login where username='$username'";
+$Checksql="SELECT * from users where username='$username' AND password='$password'";
 $checkquery=mysqli_query($conn,$Checksql);
-$checkfetch=mysqli_num_rows($checkquery);
-if ($checkfetch>0) 
+$checkfetch=mysqli_fetch_array($checkquery);
+if ($checkfetch) 
   {
     echo "<script>alert('Username already exists'); window.location = 'studentform.php';</script>";
    }
@@ -448,27 +388,31 @@ if(in_array($imageActualExt,$allowed))
   move_uploaded_file(
     $imageTmpName,$imageDestination);
 
-
-
-
-
-  $insert_sql="INSERT INTO staff (staff_id, name, short_name, username, level, father, mother, dob, address, gender, blood_group, department, doj, staff_email, alt_email, phone, alt_phone, religion, category, staff_image, father_image, staff_uidai_number, staff_uidai_image, designation, qualification, status) VALUES (NULL, '$Name', '$Shortname', '$Username', '$user_level', '$fathername', '$mothername', '$dob', '$Address', '$Gender', '$bloodgroup', '$Department', '$doj', '$email', '$empty', '$phone', '$empty', '$Religion', '$Category', '$imageDestination', '$empty', '$empty', '$empty', '$Designation', '$Qualification', '1');";
-$insert_query=mysqli_query($conn, $insert_sql);
- $insert_id = mysqli_insert_id($conn);
-
-
- 
-$Password=random_code(8);
-$user_sql="INSERT INTO user_login (tid, user_id, username, password, user_level, login_log, logout_log, status) VALUES (NULL, '$insert_id', '$Username', '$Password', '$user_level', '$empty', '$empty', '1');";
+$user_sql="INSERT INTO users (id, username, password, type, registered, registering_date) VALUES (NULL, '$username', '$password', '$type', 0, NULL)";
    $user_query=mysqli_query($conn,$user_sql);
 
-  
-  // $datesql = "UPDATE users SET registering_date='$date'  WHERE username='$username'";
-  // $updating=mysqli_query($conn,$datesql);
+
+
+  $insert_sql="INSERT INTO teacher (id, username, teacher_code, short_name, Name, Father_name, Mother_name, DOB, DOJ, Department, Qualification, Blood_group, Image, email, Phone_no, Address, Appointment_type, Designation) VALUES (NULL, '$username', '$t_code', '$shortname', '$name', '$fathername', '$mothername', '$dob', '$doj', '$department', '$qualification', '$blood_group', '$imageDestination', '$email', '$phone', '$address', '$appointment_type', '$designation')";
+
+
+$t=time();
+//$_SESSION["lecarray"]=array();
+//extracting day out of timestamp
+$timestamp = strtotime($t);
+$day = date('l');
+//extracting date out of timestamp
+$date=date("Y-m-d",$t);
 
   
-if ($insert_query && $user_query) {
-    echo "<script>alert('Thanks For Registering. Your account will be approved soon.'); window.location = reload;</script>";
+  echo $date;
+  
+  $datesql = "UPDATE users SET registering_date='$date'  WHERE username='$username'";
+  $updating=mysqli_query($conn,$datesql);
+
+  $insert_query=mysqli_query($conn, $insert_sql);
+if ($insert_query) {
+    echo "<script>alert('Thanks For Registering. Your account will be approved soon.'); window.location = 'gndpclogin.webinfoera.com';</script>";
   }
 
 
@@ -489,11 +433,6 @@ if ($insert_query && $user_query) {
 
 }
 
-}
-
-function random_code($limit)
-{
-    return substr(base_convert(sha1(uniqid(mt_rand())), 16, 36), 0, $limit);
 }
 
 ?>
